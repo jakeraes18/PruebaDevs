@@ -1,0 +1,203 @@
+.cargo-order-card {
+    background-color: var(--color-card-dark);
+    border-radius: 12px;
+    padding: 20px 20px 0 0;
+    margin-bottom: 20px;
+}
+
+.cargo-order-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.cargo-order-card .order-type {
+  background-color: #3A3A3A;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: var(--color-text-light);
+}
+
+.cargo-order-card .order-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.cargo-order-card .status-icon {
+  font-size: 1.2em;
+}
+
+.cargo-order-card .status-accepted { color: var(--color-green-status); }
+.cargo-order-card .status-in-transit { color: var(--color-blue-status); }
+.cargo-order-card .status-on-hold { color: var(--color-orange-status); }
+
+
+.cargo-order-card .card-body {
+  margin-bottom: 15px;
+}
+
+.cargo-order-card .location-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  color: var(--color-text-light);
+  margin-left: 20px;
+}
+
+.cargo-order-card .location-icon {
+  font-size: 1.5em;
+  color: var(--color-text-muted);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.cargo-order-card .location-details {
+  flex-grow: 1;
+}
+
+.date-time span{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date-time span:last-child {
+    color: rgb(255 255 255 / 28%);
+}
+
+.cargo-order-card .location-label {
+  font-size: 0.8em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  display: block;
+}
+
+.cargo-order-card .location-address {
+  font-size: 0.95em;
+  margin-top: 2px;
+}
+
+.cargo-order-card .location-date,
+.cargo-order-card .location-time {
+  font-size: 0.9em;
+  color: var(--color-text-muted);
+  margin-left: auto;
+  white-space: nowrap; 
+}
+
+.cargo-order-card .card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--color-border-dark);
+}
+
+.cargo-order-card .pickup-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary-yellow);
+  font-weight: bold;
+}
+
+.cargo-order-card .pickup-icon {
+  font-size: 1.3em;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.action-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex: 1; /* Para que ocupen el espacio disponible */
+}
+
+.action-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.yellow-bg {
+  background-color: var(--color-primary-yellow);
+  color: var(--color-background-dark);
+}
+
+.yellow-bg:hover:not(:disabled) {
+  background-color: #e6b000; /* Un amarillo más oscuro al pasar el ratón */
+}
+
+.gray-bg {
+  background-color: var(--color-dark-gray);
+  color: var(--color-text-light);
+}
+
+.gray-bg:hover:not(:disabled) {
+  background-color: #555;
+}
+
+.resume-button {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-dark-gray); /* Borde para el botón Resume */
+}
+
+.resume-button:hover {
+  background-color: var(--color-dark-gray);
+}
+
+.resume-icon {
+  font-size: 1.1em;
+}
+
+/* Estilos para el status dot (ya deberías tener algo similar) */
+.order-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.grey-dot-bg { background-color: #888; }
+.blue-dot-bg { background-color: #007bff; }
+/* Asegúrate de tener clases para otros estados como "in-transit", "assigned", etc. */
+/* Si tu API devuelve "Orden Asignada", asegúrate de tener una clase CSS para '.orden-asignada' */
+.order-status-dot.orden-asignada { background-color: #4CAF50; /* Un verde para asignada */ }
+.order-status-dot.recoleccion-completada { background-color: #2196F3; /* Un azul para completada */ }
+/* ... más estados según tu API ... */
+
+/* Para el status-badge en CargoDetailsScreen, es similar */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--color-background-dark);
+}
+
+.status-badge.orden-asignada { background-color: #4CAF50; }
+.status-badge.recoleccion-completada { background-color: #2196F3; }
+.status-badge.in-transit { background-color: #FFC107; } /* Amarillo para en tránsito */
+.status-badge.on-hold { background-color: #f44336; } /* Rojo para en espera */
+/* ... y así sucesivamente para todos los posibles status_string de tu API ... */

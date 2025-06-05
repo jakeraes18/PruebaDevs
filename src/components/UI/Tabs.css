@@ -1,0 +1,39 @@
+.tabs-container {
+  display: flex;
+  background-color: var(--color-background-dark); /* Fondo oscuro del header */
+  border-bottom: 2px solid var(--color-border-dark);
+  margin-bottom: 20px; /* Espacio debajo de los tabs */
+  padding-bottom: 5px; /* Para la línea activa */
+}
+
+.tab-item {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  color: var(--color-text-muted);
+  font-size: 1.1em;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.tab-item:hover {
+  color: var(--color-text-light);
+}
+
+.tab-item.active {
+  color: var(--color-primary-yellow);
+  font-weight: bold;
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -7px; /* Ajusta para que la línea quede bien */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 30px); /* Ajusta el ancho de la línea según el padding */
+  height: 3px;
+  background-color: var(--color-primary-yellow);
+  border-radius: 2px;
+}

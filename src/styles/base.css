@@ -1,0 +1,38 @@
+/* Importar los colores */
+@import './colors.css';
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* O la fuente que uses, puedes importar Google Fonts */
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos de texto globales si es necesario */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-light);
+}
+
+p {
+    color: var(--color-text-light);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

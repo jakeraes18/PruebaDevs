@@ -1,0 +1,162 @@
+/* Hereda de .screen-container en CargoOrdersScreen.css */
+.details-screen .content-area {
+  padding: 0 20px; /* Resetear padding para esta pantalla si es diferente */
+}
+
+.details-content {
+  overflow-y: auto; /* Permite scroll para el contenido del detalle */
+  padding-bottom: 20px; /* Espacio al final del scroll */
+}
+
+.reference-number {
+  font-size: 0.9em;
+  color: var(--color-text-muted);
+  margin-top: 15px;
+}
+
+.order-id-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.location-item-detail {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  position: relative; /* Para el círculo del timeline */
+}
+
+.location-item-detail:last-of-type {
+  margin-bottom: 0;
+}
+
+.location-item-detail .location-icon {
+  font-size: 1.5em;
+  color: var(--color-text-muted);
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.location-details-group {
+  flex-grow: 1;
+}
+
+.detail-label {
+  font-size: 0.8em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  display: block;
+}
+
+.detail-address {
+  font-size: 0.95em;
+  color: var(--color-text-light);
+  margin-top: 2px;
+}
+
+.status-badge {
+  background-color: var(--color-card-dark);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-left: 15px;
+  white-space: nowrap;
+}
+.status-badge.accepted { color: var(--color-green-status); }
+.status-badge.in-transit { color: var(--color-blue-status); }
+.status-badge.on-hold { color: var(--color-orange-status); } /* Nuevo para On hold */
+
+
+.timeline-dot {
+  position: absolute;
+  left: 21px; /* Ajustar para que quede entre los iconos */
+  top: 60px; /* Ajustar posición vertical */
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-border-dark); /* Color del punto */
+  border-radius: 50%;
+  z-index: 1; /* Asegura que el punto esté encima de la línea */
+}
+
+.user-profile-section {
+  display: flex;
+  flex-direction: column; /* Apila el avatar y el tiempo */
+  align-items: center;
+  margin: 30px 0;
+}
+
+.user-time {
+  font-size: 0.9em;
+  color: var(--color-text-muted);
+  margin-top: 10px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: var(--color-text-light);
+}
+
+.pickup-data-details p {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  color: var(--color-text-muted);
+}
+.pickup-data-details p:last-child {
+  margin-bottom: 0;
+}
+
+.location-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Para separar la info del icono de toggle */
+  padding: 10px; /* Añade un poco de padding para que sea clickeable */
+  cursor: pointer; /* Indica que es clickeable */
+  border-bottom: 1px solid var(--color-background-dark); /* Separador visual */
+  margin-bottom: 10px; /* Espacio debajo */
+}
+
+.location-toggle-container:hover {
+    background-color: #333; /* Un ligero hover */
+}
+
+.location-toggle-container .location-item-detail {
+  flex-grow: 1; /* Permite que la info de ubicación ocupe espacio */
+  display: flex; /* Asegura el layout interno */
+  align-items: center;
+  margin-bottom: 0; /* Elimina el margin-bottom si ya lo tienes en location-item-detail */
+}
+
+.location-toggle-container .toggle-icon {
+  font-size: 1.5em;
+  color: var(--color-text-gray);
+}
+
+.pickup-data-card .card-header-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px; /* Padding para el encabezado del panel */
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-background-dark);
+}
+
+.pickup-data-card .card-header-toggle .card-title {
+  margin: 0; /* Elimina el margen por defecto del h3 */
+}
+
+.pickup-data-card .pickup-data-details {
+  padding: 15px;
+  font-size: 0.9em;
+  color: var(--color-text-light);
+}
+
+.pickup-data-card .pickup-data-details p {
+  margin-bottom: 5px;
+}
+
+.pickup-data-card .pickup-data-details p:last-child {
+  margin-bottom: 0;
+}

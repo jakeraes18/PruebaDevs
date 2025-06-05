@@ -1,0 +1,24 @@
+.app-header {
+  background-color: var(--color-background-dark);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.app-header .back-button,
+.app-header .notification-button {
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  font-size: 1.8em;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.app-header .header-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--color-text-light);
+}

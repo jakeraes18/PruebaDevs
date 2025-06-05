@@ -1,0 +1,29 @@
+.input-field-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-card-dark);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 15px; /* Ajusta según el diseño */
+}
+
+.input-field-icon {
+  color: var(--color-text-muted);
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.input-field {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--color-text-light);
+  font-size: 1em;
+  padding: 0;
+}
+
+.input-field::placeholder {
+  color: var(--color-text-muted);
+}

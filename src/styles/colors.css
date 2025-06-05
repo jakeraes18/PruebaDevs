@@ -1,0 +1,11 @@
+:root {
+  --color-background-dark: #1A1A1A; /* Fondo principal oscuro */
+  --color-card-dark: #2A2A2A;      /* Fondo de tarjetas oscuras */
+  --color-text-light: #E0E0E0;     /* Texto claro */
+  --color-text-muted: #888888;     /* Texto secundario/desactivado */
+  --color-primary-yellow: #FFC107; /* Amarillo de acento */
+  --color-green-status: #4CAF50;   /* Verde para "Accepted" */
+  --color-blue-status: #2196F3;    /* Azul para "In transit" */
+  --color-orange-status: #FF9800;  /* Naranja para "On hold" */
+  --color-border-dark: #3A3A3A;    /* Borde oscuro */
+}

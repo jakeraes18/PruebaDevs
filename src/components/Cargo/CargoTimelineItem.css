@@ -1,0 +1,67 @@
+/* src/components/Cargo/CargoTimelineItem.css */
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+  width: 24px; /* Ajusta el tamaño del icono */
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  z-index: 1;
+}
+
+.timeline-icon .check-icon {
+  color: var(--color-primary-yellow); /* Color amarillo para el check */
+  font-size: 24px;
+}
+
+.timeline-icon .dot-icon {
+  color: var(--color-dark-gray); /* Color gris para el círculo no completado */
+  font-size: 24px;
+}
+
+/* Línea de conexión entre los puntos del timeline */
+.timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 11px; /* Centrar la línea con el icono */
+  top: 24px; /* Desde la parte inferior del icono */
+  bottom: -20px; /* Hasta el siguiente icono */
+  width: 2px;
+  background-color: var(--color-dark-gray); /* Color de la línea */
+  z-index: 0;
+}
+
+.timeline-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-label {
+  font-weight: bold;
+  color: var(--color-text-light);
+}
+
+.timeline-description {
+  font-size: 0.9em;
+  color: var(--color-text-gray);
+  margin-top: 2px;
+}
+
+/* Estilo para items completados (opcional, si quieres cambiar más cosas) */
+.timeline-item.completed .timeline-label {
+  color: var(--color-text-light); /* Mantener el color o cambiar a un gris más claro */
+}
